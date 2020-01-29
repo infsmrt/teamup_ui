@@ -1,0 +1,19 @@
+<div style="display: flex;flex-direction: row;align-items: center;">
+    <div style="display: flex; flex-direction: column;">
+        <h3>Select Your Position</h3>
+        <select [ngModel]="selectedPosition" (ngModelChange)="onPositionSelected($event)">
+            <option value="c-f">Center Forward</option>
+            <option value="f">Forward</option>
+            <option value="g">Goalkeeper</option>
+        </select>
+    </div>
+    <div style="display: flex; flex-direction: column; margin-left: 20px;">
+        <h3>Select Your Location</h3>
+        <select [ngModel]="selectedLocation" (ngModelChange)="onLocationSelected($event)">
+            <option value="233">New York</option>
+            <option value="164">San Francisco</option>
+            <option value="101">Chicago</option>
+        </select>
+    </div>
+    <input type="button" value="Search" style="margin-left: 20px;margin-bottom: 0px;" (click)="getSuggestions()" />
+</div>
